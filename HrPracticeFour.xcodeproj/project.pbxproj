@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		873474322D373AB2004C452A /* HrPracticeFourWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8734740F2D373AB0004C452A /* HrPracticeFourWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		8715FE452D35E0CD008098F9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,12 +25,50 @@
 			remoteGlobalIDString = 8715FE312D35E0CC008098F9;
 			remoteInfo = HrPracticeFour;
 		};
+		8734741F2D373AB2004C452A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8715FE2A2D35E0CC008098F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8734740E2D373AB0004C452A;
+			remoteInfo = "HrPracticeFourWatch Watch App";
+		};
+		873474292D373AB2004C452A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8715FE2A2D35E0CC008098F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8734740E2D373AB0004C452A;
+			remoteInfo = "HrPracticeFourWatch Watch App";
+		};
+		873474302D373AB2004C452A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8715FE2A2D35E0CC008098F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8734740E2D373AB0004C452A;
+			remoteInfo = "HrPracticeFourWatch Watch App";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		873474362D373AB2004C452A /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				873474322D373AB2004C452A /* HrPracticeFourWatch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8715FE322D35E0CC008098F9 /* HrPracticeFour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HrPracticeFour.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8715FE442D35E0CD008098F9 /* HrPracticeFourTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HrPracticeFourTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8715FE4E2D35E0CD008098F9 /* HrPracticeFourUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HrPracticeFourUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8734740F2D373AB0004C452A /* HrPracticeFourWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HrPracticeFourWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8734741E2D373AB2004C452A /* HrPracticeFourWatch Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HrPracticeFourWatch Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		873474282D373AB2004C452A /* HrPracticeFourWatch Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HrPracticeFourWatch Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -43,6 +85,26 @@
 		8715FE512D35E0CD008098F9 /* HrPracticeFourUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = HrPracticeFourUITests;
+			sourceTree = "<group>";
+		};
+		873474102D373AB0004C452A /* HrPracticeFourWatch Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "HrPracticeFourWatch Watch App";
+			sourceTree = "<group>";
+		};
+		873474212D373AB2004C452A /* HrPracticeFourWatch Watch AppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "HrPracticeFourWatch Watch AppTests";
+			sourceTree = "<group>";
+		};
+		8734742B2D373AB2004C452A /* HrPracticeFourWatch Watch AppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "HrPracticeFourWatch Watch AppUITests";
+			sourceTree = "<group>";
+		};
+		8734743D2D373C75004C452A /* Shared */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -69,15 +131,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8734740C2D373AB0004C452A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8734741B2D373AB2004C452A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		873474252D373AB2004C452A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		8715FE292D35E0CC008098F9 = {
 			isa = PBXGroup;
 			children = (
+				8734743D2D373C75004C452A /* Shared */,
 				8715FE342D35E0CC008098F9 /* HrPracticeFour */,
 				8715FE472D35E0CD008098F9 /* HrPracticeFourTests */,
 				8715FE512D35E0CD008098F9 /* HrPracticeFourUITests */,
+				873474102D373AB0004C452A /* HrPracticeFourWatch Watch App */,
+				873474212D373AB2004C452A /* HrPracticeFourWatch Watch AppTests */,
+				8734742B2D373AB2004C452A /* HrPracticeFourWatch Watch AppUITests */,
 				8715FE332D35E0CC008098F9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +175,9 @@
 				8715FE322D35E0CC008098F9 /* HrPracticeFour.app */,
 				8715FE442D35E0CD008098F9 /* HrPracticeFourTests.xctest */,
 				8715FE4E2D35E0CD008098F9 /* HrPracticeFourUITests.xctest */,
+				8734740F2D373AB0004C452A /* HrPracticeFourWatch Watch App.app */,
+				8734741E2D373AB2004C452A /* HrPracticeFourWatch Watch AppTests.xctest */,
+				873474282D373AB2004C452A /* HrPracticeFourWatch Watch AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,13 +192,16 @@
 				8715FE2E2D35E0CC008098F9 /* Sources */,
 				8715FE2F2D35E0CC008098F9 /* Frameworks */,
 				8715FE302D35E0CC008098F9 /* Resources */,
+				873474362D373AB2004C452A /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				873474312D373AB2004C452A /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				8715FE342D35E0CC008098F9 /* HrPracticeFour */,
+				8734743D2D373C75004C452A /* Shared */,
 			);
 			name = HrPracticeFour;
 			packageProductDependencies = (
@@ -163,6 +256,74 @@
 			productReference = 8715FE4E2D35E0CD008098F9 /* HrPracticeFourUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		8734740E2D373AB0004C452A /* HrPracticeFourWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 873474332D373AB2004C452A /* Build configuration list for PBXNativeTarget "HrPracticeFourWatch Watch App" */;
+			buildPhases = (
+				8734740B2D373AB0004C452A /* Sources */,
+				8734740C2D373AB0004C452A /* Frameworks */,
+				8734740D2D373AB0004C452A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				873474102D373AB0004C452A /* HrPracticeFourWatch Watch App */,
+			);
+			name = "HrPracticeFourWatch Watch App";
+			packageProductDependencies = (
+			);
+			productName = "HrPracticeFourWatch Watch App";
+			productReference = 8734740F2D373AB0004C452A /* HrPracticeFourWatch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8734741D2D373AB2004C452A /* HrPracticeFourWatch Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 873474372D373AB2004C452A /* Build configuration list for PBXNativeTarget "HrPracticeFourWatch Watch AppTests" */;
+			buildPhases = (
+				8734741A2D373AB2004C452A /* Sources */,
+				8734741B2D373AB2004C452A /* Frameworks */,
+				8734741C2D373AB2004C452A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				873474202D373AB2004C452A /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				873474212D373AB2004C452A /* HrPracticeFourWatch Watch AppTests */,
+			);
+			name = "HrPracticeFourWatch Watch AppTests";
+			packageProductDependencies = (
+			);
+			productName = "HrPracticeFourWatch Watch AppTests";
+			productReference = 8734741E2D373AB2004C452A /* HrPracticeFourWatch Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		873474272D373AB2004C452A /* HrPracticeFourWatch Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8734743A2D373AB2004C452A /* Build configuration list for PBXNativeTarget "HrPracticeFourWatch Watch AppUITests" */;
+			buildPhases = (
+				873474242D373AB2004C452A /* Sources */,
+				873474252D373AB2004C452A /* Frameworks */,
+				873474262D373AB2004C452A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8734742A2D373AB2004C452A /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				8734742B2D373AB2004C452A /* HrPracticeFourWatch Watch AppUITests */,
+			);
+			name = "HrPracticeFourWatch Watch AppUITests";
+			packageProductDependencies = (
+			);
+			productName = "HrPracticeFourWatch Watch AppUITests";
+			productReference = 873474282D373AB2004C452A /* HrPracticeFourWatch Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +345,17 @@
 						CreatedOnToolsVersion = 16.1;
 						TestTargetID = 8715FE312D35E0CC008098F9;
 					};
+					8734740E2D373AB0004C452A = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					8734741D2D373AB2004C452A = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 8734740E2D373AB0004C452A;
+					};
+					873474272D373AB2004C452A = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = 8734740E2D373AB0004C452A;
+					};
 				};
 			};
 			buildConfigurationList = 8715FE2D2D35E0CC008098F9 /* Build configuration list for PBXProject "HrPracticeFour" */;
@@ -203,6 +375,9 @@
 				8715FE312D35E0CC008098F9 /* HrPracticeFour */,
 				8715FE432D35E0CD008098F9 /* HrPracticeFourTests */,
 				8715FE4D2D35E0CD008098F9 /* HrPracticeFourUITests */,
+				8734740E2D373AB0004C452A /* HrPracticeFourWatch Watch App */,
+				8734741D2D373AB2004C452A /* HrPracticeFourWatch Watch AppTests */,
+				873474272D373AB2004C452A /* HrPracticeFourWatch Watch AppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +398,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		8715FE4C2D35E0CD008098F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8734740D2D373AB0004C452A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8734741C2D373AB2004C452A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		873474262D373AB2004C452A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,6 +449,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8734740B2D373AB0004C452A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8734741A2D373AB2004C452A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		873474242D373AB2004C452A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -265,6 +482,21 @@
 			isa = PBXTargetDependency;
 			target = 8715FE312D35E0CC008098F9 /* HrPracticeFour */;
 			targetProxy = 8715FE4F2D35E0CD008098F9 /* PBXContainerItemProxy */;
+		};
+		873474202D373AB2004C452A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8734740E2D373AB0004C452A /* HrPracticeFourWatch Watch App */;
+			targetProxy = 8734741F2D373AB2004C452A /* PBXContainerItemProxy */;
+		};
+		8734742A2D373AB2004C452A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8734740E2D373AB0004C452A /* HrPracticeFourWatch Watch App */;
+			targetProxy = 873474292D373AB2004C452A /* PBXContainerItemProxy */;
+		};
+		873474312D373AB2004C452A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8734740E2D373AB0004C452A /* HrPracticeFourWatch Watch App */;
+			targetProxy = 873474302D373AB2004C452A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -393,12 +625,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HrPracticeFour/HrPracticeFour.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HrPracticeFour/Preview Content\"";
 				DEVELOPMENT_TEAM = A83R25GQT7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app needs access to Health data to display heart rate information.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -422,12 +656,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HrPracticeFour/HrPracticeFour.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HrPracticeFour/Preview Content\"";
 				DEVELOPMENT_TEAM = A83R25GQT7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app needs access to Health data to display heart rate information.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -518,6 +754,144 @@
 			};
 			name = Release;
 		};
+		873474342D373AB2004C452A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HrPracticeFourWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = A83R25GQT7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = HrPracticeFourWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = EWU.HrPracticeFour;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = EWU.HrPracticeFour.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.1;
+			};
+			name = Debug;
+		};
+		873474352D373AB2004C452A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HrPracticeFourWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = A83R25GQT7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = HrPracticeFourWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = EWU.HrPracticeFour;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = EWU.HrPracticeFour.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.1;
+			};
+			name = Release;
+		};
+		873474382D373AB2004C452A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A83R25GQT7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "EWU.HrPracticeFourWatch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HrPracticeFourWatch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HrPracticeFourWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.1;
+			};
+			name = Debug;
+		};
+		873474392D373AB2004C452A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A83R25GQT7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "EWU.HrPracticeFourWatch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HrPracticeFourWatch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HrPracticeFourWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.1;
+			};
+			name = Release;
+		};
+		8734743B2D373AB2004C452A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A83R25GQT7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "EWU.HrPracticeFourWatch-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "HrPracticeFourWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.1;
+			};
+			name = Debug;
+		};
+		8734743C2D373AB2004C452A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A83R25GQT7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "EWU.HrPracticeFourWatch-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "HrPracticeFourWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -553,6 +927,33 @@
 			buildConfigurations = (
 				8715FE5F2D35E0CD008098F9 /* Debug */,
 				8715FE602D35E0CD008098F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		873474332D373AB2004C452A /* Build configuration list for PBXNativeTarget "HrPracticeFourWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				873474342D373AB2004C452A /* Debug */,
+				873474352D373AB2004C452A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		873474372D373AB2004C452A /* Build configuration list for PBXNativeTarget "HrPracticeFourWatch Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				873474382D373AB2004C452A /* Debug */,
+				873474392D373AB2004C452A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8734743A2D373AB2004C452A /* Build configuration list for PBXNativeTarget "HrPracticeFourWatch Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8734743B2D373AB2004C452A /* Debug */,
+				8734743C2D373AB2004C452A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

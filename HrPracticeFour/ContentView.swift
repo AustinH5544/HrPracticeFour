@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  HrPracticeFour
-//
-//  Created by Austin Harrison on 1/13/25.
-//
-
 import SwiftUI
 import SwiftData
 
@@ -14,15 +7,29 @@ struct ContentView: View {
 
     var body: some View {
         NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+            VStack { // Stack the list and button
+                List {
+                    ForEach(items) { item in
+                        NavigationLink {
+                            Text("Item at this specific \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
+                        } label: {
+                            Text("This item \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
+                        }
                     }
+                    .onDelete(perform: deleteItems)
                 }
-                .onDelete(perform: deleteItems)
+                
+                Spacer() // Pushes the button to the bottom
+
+                NavigationLink(destination: SecondView()) {
+                    Label("Go to Heart Rate Page", systemImage: "arrow.right")
+                        .font(.headline)
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(Color.blue)
+                        .cornerRadius(8)
+                }
+                .padding(.bottom, 20) // Add some spacing at the bottom
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
