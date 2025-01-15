@@ -71,6 +71,16 @@
 		873474282D373AB2004C452A /* HrPracticeFourWatch Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HrPracticeFourWatch Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		8734743F2D373F76004C452A /* Exceptions for "Shared" folder in "HrPracticeFourWatch Watch App" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				HealthKitManager.swift,
+			);
+			target = 8734740E2D373AB0004C452A /* HrPracticeFourWatch Watch App */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		8715FE342D35E0CC008098F9 /* HrPracticeFour */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
@@ -104,6 +114,9 @@
 		};
 		8734743D2D373C75004C452A /* Shared */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				8734743F2D373F76004C452A /* Exceptions for "Shared" folder in "HrPracticeFourWatch Watch App" target */,
+			);
 			path = Shared;
 			sourceTree = "<group>";
 		};
@@ -759,6 +772,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "HrPracticeFourWatch Watch App/HrPracticeFourWatch Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HrPracticeFourWatch Watch App/Preview Content\"";
@@ -766,6 +780,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = HrPracticeFourWatch;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app needs access to Health data to display heart rate information.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = EWU.HrPracticeFour;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -789,6 +804,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "HrPracticeFourWatch Watch App/HrPracticeFourWatch Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HrPracticeFourWatch Watch App/Preview Content\"";
@@ -796,6 +812,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = HrPracticeFourWatch;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app needs access to Health data to display heart rate information.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = EWU.HrPracticeFour;
 				LD_RUNPATH_SEARCH_PATHS = (
