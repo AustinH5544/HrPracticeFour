@@ -72,6 +72,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		3D95D2CD2D4C5A6800D33650 /* Exceptions for "HrPracticeFourWatch Watch App" folder in "HrPracticeFourWatch Watch App" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"HrPracticeFourWatch-Watch-App-Info.plist",
+			);
+			target = 8734740E2D373AB0004C452A /* HrPracticeFourWatch Watch App */;
+		};
 		8734743F2D373F76004C452A /* Exceptions for "Shared" folder in "HrPracticeFourWatch Watch App" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -82,7 +89,7 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		8715FE342D35E0CC008098F9 /* HrPracticeFour */ = {
+		3DD645172D470F1B0036914E /* HrPracticeFour */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = HrPracticeFour;
 			sourceTree = "<group>";
@@ -99,6 +106,9 @@
 		};
 		873474102D373AB0004C452A /* HrPracticeFourWatch Watch App */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				3D95D2CD2D4C5A6800D33650 /* Exceptions for "HrPracticeFourWatch Watch App" folder in "HrPracticeFourWatch Watch App" target */,
+			);
 			path = "HrPracticeFourWatch Watch App";
 			sourceTree = "<group>";
 		};
@@ -171,14 +181,14 @@
 		8715FE292D35E0CC008098F9 = {
 			isa = PBXGroup;
 			children = (
-				8734743D2D373C75004C452A /* Shared */,
-				8715FE342D35E0CC008098F9 /* HrPracticeFour */,
+				3DD645172D470F1B0036914E /* HrPracticeFour */,
 				8715FE472D35E0CD008098F9 /* HrPracticeFourTests */,
 				8715FE512D35E0CD008098F9 /* HrPracticeFourUITests */,
 				873474102D373AB0004C452A /* HrPracticeFourWatch Watch App */,
 				873474212D373AB2004C452A /* HrPracticeFourWatch Watch AppTests */,
 				8734742B2D373AB2004C452A /* HrPracticeFourWatch Watch AppUITests */,
 				8715FE332D35E0CC008098F9 /* Products */,
+				8734743D2D373C75004C452A /* Shared */,
 			);
 			sourceTree = "<group>";
 		};
@@ -213,7 +223,7 @@
 				873474312D373AB2004C452A /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				8715FE342D35E0CC008098F9 /* HrPracticeFour */,
+				3DD645172D470F1B0036914E /* HrPracticeFour */,
 				8734743D2D373C75004C452A /* Shared */,
 			);
 			name = HrPracticeFour;
@@ -639,10 +649,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = HrPracticeFour/HrPracticeFour.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HrPracticeFour/Preview Content\"";
-				DEVELOPMENT_TEAM = A83R25GQT7;
+				DEVELOPMENT_TEAM = 7ZTT37X4QG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app needs access to Health data to display heart rate information.";
@@ -658,6 +669,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = EWU.HrPracticeFour;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -670,10 +682,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = HrPracticeFour/HrPracticeFour.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HrPracticeFour/Preview Content\"";
-				DEVELOPMENT_TEAM = A83R25GQT7;
+				DEVELOPMENT_TEAM = 7ZTT37X4QG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app needs access to Health data to display heart rate information.";
@@ -689,6 +702,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = EWU.HrPracticeFour;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -699,14 +713,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = A83R25GQT7;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = EWU.HrPracticeFourTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -718,14 +734,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = A83R25GQT7;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = EWU.HrPracticeFourTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -773,14 +791,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "HrPracticeFourWatch Watch App/HrPracticeFourWatch Watch App.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HrPracticeFourWatch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = A83R25GQT7;
+				DEVELOPMENT_TEAM = 7ZTT37X4QG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "HrPracticeFourWatch-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = HrPracticeFourWatch;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app needs access to Health data to display heart rate information.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app needs access to update workout sessions for real-time heart rate tracking.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = EWU.HrPracticeFour;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -788,14 +810,15 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = EWU.HrPracticeFour.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = EWU.HrPracticeFour.watchkitappTwo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 11.1;
+				WATCHOS_DEPLOYMENT_TARGET = 10.6;
 			};
 			name = Debug;
 		};
@@ -805,14 +828,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "HrPracticeFourWatch Watch App/HrPracticeFourWatch Watch App.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HrPracticeFourWatch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = A83R25GQT7;
+				DEVELOPMENT_TEAM = 7ZTT37X4QG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "HrPracticeFourWatch-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = HrPracticeFourWatch;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app needs access to Health data to display heart rate information.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app needs access to update workout sessions for real-time heart rate tracking.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = EWU.HrPracticeFour;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -820,14 +847,15 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = EWU.HrPracticeFour.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = EWU.HrPracticeFour.watchkitappTwo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 11.1;
+				WATCHOS_DEPLOYMENT_TARGET = 10.6;
 			};
 			name = Release;
 		};

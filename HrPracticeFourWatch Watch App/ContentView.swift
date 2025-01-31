@@ -6,10 +6,6 @@ struct ContentView: View {
     @State private var heartRate: Double?
     @State private var errorMessage: String?
 
-    init() {
-        healthKitManager.isMockMode = true // Enable mock mode for testing
-    }
-
     var body: some View {
         VStack {
             Text("Heart Rate")
@@ -32,16 +28,31 @@ struct ContentView: View {
                     .foregroundColor(.gray)
                     .padding()
             }
+
+            Button(action: {
+                stopWorkout()
+            }) {
+                Text("Stop Workout")
+                    .padding()
+                    .background(Color.red)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }
         }
         .onAppear {
             requestAuthorization()
+        }
+        .onReceive(NotificationCenter.default.publisher(for: .didReceiveHeartRate)) { notification in
+            if let userInfo = notification.userInfo, let newHeartRate = userInfo["heartRate"] as? Double {
+                self.heartRate = newHeartRate
+            }
         }
     }
 
     private func requestAuthorization() {
         healthKitManager.requestAuthorization { success, error in
             if success {
-                startLiveUpdates()
+                startWorkout()
             } else if let error = error {
                 DispatchQueue.main.async {
                     self.errorMessage = "Authorization failed: \(error.localizedDescription)"
@@ -54,18 +65,18 @@ struct ContentView: View {
         }
     }
 
-    private func startLiveUpdates() {
-        healthKitManager.startLiveHeartRateUpdates { rate, error in
+    private func startWorkout() {
+        healthKitManager.startWorkoutSession { success, error in
             DispatchQueue.main.async {
                 if let error = error {
-                    self.errorMessage = "Failed to get live updates: \(error.localizedDescription)"
-                } else if let rate = rate {
-                    self.heartRate = rate
-                } else {
-                    self.errorMessage = "No heart rate data available."
+                    self.errorMessage = "Workout session failed: \(error.localizedDescription)"
                 }
             }
         }
+    }
+
+    private func stopWorkout() {
+        healthKitManager.stopWorkoutSession()
     }
 }
 

@@ -1,86 +1,99 @@
 import HealthKit
 
-class HealthKitManager {
-    let healthStore = HKHealthStore()
-    var isMockMode: Bool = false // Toggle for mock data
+#if os(watchOS) // Ensure this code is only compiled for watchOS
 
-    // Request authorization to access heart rate data
+class HealthKitManager: NSObject, HKWorkoutSessionDelegate, HKLiveWorkoutBuilderDelegate {
+    let healthStore = HKHealthStore()
+    private var workoutSession: HKWorkoutSession?
+    private var workoutBuilder: HKLiveWorkoutBuilder?
+
+    // Request authorization for HealthKit
     func requestAuthorization(completion: @escaping (Bool, Error?) -> Void) {
-        if isMockMode {
-            completion(true, nil) // Mock mode doesn't need real authorization
+        guard let heartRateType = HKObjectType.quantityType(forIdentifier: .heartRate) else {
+            completion(false, NSError(domain: "HealthKitManager", code: 1, userInfo: [NSLocalizedDescriptionKey: "Heart rate type not available"]))
             return
         }
 
-        let heartRateType = HKObjectType.quantityType(forIdentifier: .heartRate)!
-        healthStore.requestAuthorization(toShare: nil, read: [heartRateType]) { success, error in
+        let workoutType = HKObjectType.workoutType() // ✅ No need for optional binding
+        let readTypes: Set = [heartRateType, workoutType]
+        let writeTypes: Set = [workoutType] // Workout sessions require write permission
+
+        healthStore.requestAuthorization(toShare: writeTypes, read: readTypes) { success, error in
             completion(success, error)
         }
     }
 
-    // Fetch the most recent heart rate sample
-    func fetchLatestHeartRate(completion: @escaping (Double?, Error?) -> Void) {
-        if isMockMode {
-            // Provide simulated heart rate
-            let simulatedHeartRate = Double.random(in: 60...100) // Random value between 60 and 100 BPM
-            completion(simulatedHeartRate, nil)
+
+
+    // Start workout session for live heart rate updates
+    func startWorkoutSession(completion: @escaping (Bool, Error?) -> Void) {
+        guard HKQuantityType.quantityType(forIdentifier: .heartRate) != nil else {
+            completion(false, NSError(domain: "HealthKitManager", code: 2, userInfo: [NSLocalizedDescriptionKey: "Heart rate type not available"]))
             return
         }
 
-        let heartRateType = HKQuantityType.quantityType(forIdentifier: .heartRate)!
-        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)
-        let query = HKSampleQuery(
-            sampleType: heartRateType,
-            predicate: nil,
-            limit: 1,
-            sortDescriptors: [sortDescriptor]
-        ) { query, samples, error in
-            if let error = error {
-                completion(nil, error)
-                return
-            }
+        let configuration = HKWorkoutConfiguration()
+        configuration.activityType = .other
+        configuration.locationType = .unknown
 
-            guard let samples = samples as? [HKQuantitySample],
-                  let sample = samples.first else {
-                completion(nil, nil)
-                return
-            }
+        do {
+            let session = try HKWorkoutSession(healthStore: healthStore, configuration: configuration)
+            session.delegate = self
+            self.workoutSession = session
 
-            let heartRate = sample.quantity.doubleValue(for: HKUnit(from: "count/min"))
-            completion(heartRate, nil)
+            let builder = session.associatedWorkoutBuilder()
+            builder.delegate = self
+            builder.dataSource = HKLiveWorkoutDataSource(healthStore: healthStore, workoutConfiguration: configuration)
+            self.workoutBuilder = builder
+
+            session.startActivity(with: Date())
+            builder.beginCollection(withStart: Date()) { success, error in
+                completion(success, error)
+            }
+        } catch {
+            completion(false, error)
         }
-
-        healthStore.execute(query)
     }
 
-    // Simulated live heart rate updates
-    func startLiveHeartRateUpdates(completion: @escaping (Double?, Error?) -> Void) {
-        if isMockMode {
-            // Simulate heart rate updates every second
-            Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
-                let simulatedHeartRate = Double.random(in: 60...100)
-                completion(simulatedHeartRate, nil)
-            }
-            return
+    // Stop Workout Session
+    func stopWorkoutSession() {
+        workoutSession?.end()
+        workoutBuilder?.endCollection(withEnd: Date()) { success, error in
+            self.workoutBuilder?.finishWorkout { _, _ in }
         }
+    }
 
-        guard let heartRateType = HKObjectType.quantityType(forIdentifier: .heartRate) else {
-            completion(nil, NSError(domain: "HealthKitManager", code: 1, userInfo: [NSLocalizedDescriptionKey: "Heart rate type not available"]))
-            return
+    // MARK: - HKWorkoutSessionDelegate
+    func workoutSession(_ workoutSession: HKWorkoutSession, didFailWithError error: Error) {
+        print("Workout Session Failed: \(error.localizedDescription)")
+    }
+
+    func workoutSession(_ workoutSession: HKWorkoutSession, didChangeTo toState: HKWorkoutSessionState, from fromState: HKWorkoutSessionState, date: Date) {
+        // Handle state changes if necessary
+    }
+
+    // MARK: - HKLiveWorkoutBuilderDelegate
+    @objc func workoutBuilderDidCollectEvent(_ workoutBuilder: HKLiveWorkoutBuilder) {
+        // Required but not used in our case
+    }
+
+    @objc func workoutBuilder(_ workoutBuilder: HKLiveWorkoutBuilder, didCollectDataOf types: Set<HKSampleType>) {
+        guard let heartRateType = HKQuantityType.quantityType(forIdentifier: .heartRate),
+              types.contains(heartRateType),
+              let statistics = workoutBuilder.statistics(for: heartRateType),
+              let quantity = statistics.mostRecentQuantity() else { return }
+
+        let heartRate = quantity.doubleValue(for: HKUnit(from: "count/min"))
+
+        DispatchQueue.main.async {
+            NotificationCenter.default.post(name: .didReceiveHeartRate, object: self, userInfo: ["heartRate": heartRate])
         }
-
-        let query = HKObserverQuery(sampleType: heartRateType, predicate: nil) { [weak self] query, completionHandler, error in
-            if let error = error {
-                completion(nil, error)
-                return
-            }
-
-            self?.fetchLatestHeartRate { heartRate, error in
-                completion(heartRate, error)
-            }
-
-            completionHandler()
-        }
-
-        healthStore.execute(query)
     }
 }
+
+// Notification for heart rate updates
+extension Notification.Name {
+    static let didReceiveHeartRate = Notification.Name("didReceiveHeartRate")
+}
+
+#endif // End watchOS check
