@@ -72,13 +72,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		3D95D2CD2D4C5A6800D33650 /* Exceptions for "HrPracticeFourWatch Watch App" folder in "HrPracticeFourWatch Watch App" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				"HrPracticeFourWatch-Watch-App-Info.plist",
-			);
-			target = 8734740E2D373AB0004C452A /* HrPracticeFourWatch Watch App */;
-		};
 		8734743F2D373F76004C452A /* Exceptions for "Shared" folder in "HrPracticeFourWatch Watch App" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -106,9 +99,6 @@
 		};
 		873474102D373AB0004C452A /* HrPracticeFourWatch Watch App */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				3D95D2CD2D4C5A6800D33650 /* Exceptions for "HrPracticeFourWatch Watch App" folder in "HrPracticeFourWatch Watch App" target */,
-			);
 			path = "HrPracticeFourWatch Watch App";
 			sourceTree = "<group>";
 		};
